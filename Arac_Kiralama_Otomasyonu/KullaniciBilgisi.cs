@@ -115,7 +115,7 @@ namespace Arac_Kiralama_Otomasyonu
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if(AktifKullanici.Gorev == "Yönetici")
+            if(AktifKullanici.Gorev == "Yönetici" || AktifKullanici.Gorev == "admin")
             {
                 openFileDialog1.Title = "Resim Seçiniz";
                 openFileDialog1.Filter = "Resim Dosyaları|*.jpg;*.jpeg;*.png;*.bmp";
@@ -242,7 +242,7 @@ namespace Arac_Kiralama_Otomasyonu
         }
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (AktifKullanici.Gorev == "Yönetici")
+            if (AktifKullanici.Gorev == "Yönetici" || AktifKullanici.Gorev == "admin")
             {
                 /* txtAd.Clear();
                  txtSoyAd.Clear();
@@ -252,7 +252,6 @@ namespace Arac_Kiralama_Otomasyonu
                  txtTel1.Clear();
                  txtTel2.Clear();
                  txtSifre.Clear();*/
-
                 txtAd.ReadOnly = false;
                 txtSoyAd.ReadOnly = false;
                 txtGorev.ReadOnly = false;
@@ -338,10 +337,7 @@ namespace Arac_Kiralama_Otomasyonu
         }
         private void btnListe_Click(object sender, EventArgs e)
         {
-
-
-           
-            if (AktifKullanici.Gorev == "Yönetici")
+            if (AktifKullanici.Gorev == "Yönetici" || AktifKullanici.Gorev == "admin")
             {
                 this.Size = new System.Drawing.Size(1200, 387);
 
@@ -356,7 +352,6 @@ namespace Arac_Kiralama_Otomasyonu
 
                 btnListe.Visible = false;
                 btnListeEx.Visible = true;
-
 
 
                 if (btnEkle.Visible == false)
@@ -395,8 +390,6 @@ namespace Arac_Kiralama_Otomasyonu
                     btnEkle.Visible = false;
                     btnGuncelle.Visible = false;
                 }
-
-
 
 
                 SqlDataAdapter da = new SqlDataAdapter("select k_id,k_adi, k_soyadi, k_görevi, k_adresi, k_mail,k_tel,k_tel_yakin,k_sifre from kullanici", baglanti);

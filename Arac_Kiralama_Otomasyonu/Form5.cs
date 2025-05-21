@@ -341,6 +341,8 @@ namespace Arac_Kiralama_Otomasyonu
                     txtGun.Text = gun2.ToString() + " " + "Gün";
                     //cmb_durumu.Text = dgw_arac.Rows[e.RowIndex].Cells[8].Value.ToString();
 
+                    MessageBox.Show("Araba Seçildi!");
+
                 }
             }
             catch (Exception ex)
@@ -662,6 +664,7 @@ namespace Arac_Kiralama_Otomasyonu
                         MessageBox.Show("Lütfen Güncellenecek Sözleşmeyi Seçiniz!");
                         return;
                     }
+                    MessageBox.Show("Sözleşme Güncellendi!");
                 }
                 AracListele();
                 VeriYenile2();
@@ -790,6 +793,7 @@ namespace Arac_Kiralama_Otomasyonu
             {
                 MessageBox.Show("Hata: " + ex.ToString());
             }
+            MessageBox.Show("Sözleşme İptal Edildi!");
             baglanti.Close();
         }
         private void button2_Click(object sender, EventArgs e)
@@ -835,6 +839,7 @@ namespace Arac_Kiralama_Otomasyonu
                 {
                     MessageBox.Show("Bir Hata Oluştu: Teslim etmek için bir araç seşiniz! ");
                 }
+                MessageBox.Show("Araç Teslim Edildi!");
             }
             catch (Exception ex)
             {

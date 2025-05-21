@@ -15,44 +15,44 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_0421294278F240B68688AA1E5A709E84"
+        "MsmKey" = "8:_0DE906468FF143E698825426F9601B9D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_0538E8F9DA1A4C32BE2E4C551C5B062E"
+        "MsmKey" = "8:_4D8F5B47C1B04AFEAD480B08A99EC8D6"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_472AD259291E41EAB6C49E7577C8D84F"
+        "MsmKey" = "8:_7CECAD1B429740E0A675CC6B3224CCE0"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_7D2E82EDEC0E4EA98B203BA106C40502"
+        "MsmKey" = "8:_90595C8790DF4DC6AB6F953ACFB8D0D7"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_CA957278599B4F66A63339354C0AFB1A"
+        "MsmKey" = "8:_B210442B75304B6682FCACF90E48FBD1"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_D57C4B92EC374BF0ABA32F37D5E2D9F9"
+        "MsmKey" = "8:_FD5A184EE0634F0BBB771F0F88069EF4"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_D57C4B92EC374BF0ABA32F37D5E2D9F9"
+        "OwnerKey" = "8:_B210442B75304B6682FCACF90E48FBD1"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -150,27 +150,7 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0421294278F240B68688AA1E5A709E84"
-            {
-            "SourcePath" = "8:..\\Arac_Kiralama_Otomasyonu\\bin\\Debug\\ArabaKiralamaOtomasyonu_log.ldf"
-            "TargetName" = "8:ArabaKiralamaOtomasyonu_log.ldf"
-            "Tag" = "8:"
-            "Folder" = "8:_5C41072D7D23458CBE660FF00C6E1DE6"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0538E8F9DA1A4C32BE2E4C551C5B062E"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0DE906468FF143E698825426F9601B9D"
             {
             "SourcePath" = "8:..\\Arac_Kiralama_Otomasyonu\\bin\\Debug\\Arac_Kiralama_Otomasyonu.pdb"
             "TargetName" = "8:Arac_Kiralama_Otomasyonu.pdb"
@@ -190,7 +170,7 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_472AD259291E41EAB6C49E7577C8D84F"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4D8F5B47C1B04AFEAD480B08A99EC8D6"
             {
             "SourcePath" = "8:..\\Arac_Kiralama_Otomasyonu\\bin\\Debug\\jeep_15345300.ico"
             "TargetName" = "8:jeep_15345300.ico"
@@ -210,27 +190,7 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7D2E82EDEC0E4EA98B203BA106C40502"
-            {
-            "SourcePath" = "8:..\\Arac_Kiralama_Otomasyonu\\bin\\Debug\\ArabaKiralamaOtomasyonu.mdf"
-            "TargetName" = "8:ArabaKiralamaOtomasyonu.mdf"
-            "Tag" = "8:"
-            "Folder" = "8:_5C41072D7D23458CBE660FF00C6E1DE6"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CA957278599B4F66A63339354C0AFB1A"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7CECAD1B429740E0A675CC6B3224CCE0"
             {
             "SourcePath" = "8:..\\Arac_Kiralama_Otomasyonu\\bin\\Debug\\Arac_Kiralama_Otomasyonu.exe.config"
             "TargetName" = "8:Arac_Kiralama_Otomasyonu.exe.config"
@@ -250,14 +210,34 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D57C4B92EC374BF0ABA32F37D5E2D9F9"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_90595C8790DF4DC6AB6F953ACFB8D0D7"
+            {
+            "SourcePath" = "8:..\\Arac_Kiralama_Otomasyonu\\bin\\Debug\\ArabaKiralamaOtomasyonu_log.ldf"
+            "TargetName" = "8:ArabaKiralamaOtomasyonu_log.ldf"
+            "Tag" = "8:"
+            "Folder" = "8:_5C41072D7D23458CBE660FF00C6E1DE6"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B210442B75304B6682FCACF90E48FBD1"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:Arac_Kiralama_Otomasyonu, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_D57C4B92EC374BF0ABA32F37D5E2D9F9"
+                    "_B210442B75304B6682FCACF90E48FBD1"
                     {
                     "Name" = "8:Arac_Kiralama_Otomasyonu.exe"
                     "Attributes" = "3:512"
@@ -265,6 +245,26 @@
                 }
             "SourcePath" = "8:..\\Arac_Kiralama_Otomasyonu\\bin\\Debug\\Arac_Kiralama_Otomasyonu.exe"
             "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_5C41072D7D23458CBE660FF00C6E1DE6"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FD5A184EE0634F0BBB771F0F88069EF4"
+            {
+            "SourcePath" = "8:..\\Arac_Kiralama_Otomasyonu\\bin\\Debug\\ArabaKiralamaOtomasyonu.mdf"
+            "TargetName" = "8:ArabaKiralamaOtomasyonu.mdf"
             "Tag" = "8:"
             "Folder" = "8:_5C41072D7D23458CBE660FF00C6E1DE6"
             "Condition" = "8:"
@@ -338,7 +338,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Araba Kiralama Otomasyonu"
         "ProductCode" = "8:{BBD9E55D-0DB0-4700-BC5B-FA7251B77753}"
-        "PackageCode" = "8:{01E8DDBA-9EF7-4BA7-B849-052B8E1DB176}"
+        "PackageCode" = "8:{BEDA1637-4300-4282-9C2D-AA2E275763C4}"
         "UpgradeCode" = "8:{74D7AB6A-9B7A-415F-A65A-70D34CB630E8}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -458,7 +458,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_12D5E53D44034F6E8CAC06AB1C18D275"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_87D12A83D09249CCA0777A874F3C1C4F"
             {
             "Name" = "8:Araba Kiralama Otomasyonu"
             "Arguments" = "8:"
@@ -466,13 +466,13 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_D57C4B92EC374BF0ABA32F37D5E2D9F9"
+            "Target" = "8:_B210442B75304B6682FCACF90E48FBD1"
             "Folder" = "8:_9AF93CECC8C04D39B8C19B8346590B21"
             "WorkingFolder" = "8:_5C41072D7D23458CBE660FF00C6E1DE6"
-            "Icon" = "8:_472AD259291E41EAB6C49E7577C8D84F"
+            "Icon" = "8:_4D8F5B47C1B04AFEAD480B08A99EC8D6"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_48390A506A5C48B4AC44FB89726F00A1"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_B8EF212ECE77457AB09FDE120877514D"
             {
             "Name" = "8:Araba Kiralama Otomasyonu"
             "Arguments" = "8:"
@@ -480,10 +480,10 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_D57C4B92EC374BF0ABA32F37D5E2D9F9"
+            "Target" = "8:_B210442B75304B6682FCACF90E48FBD1"
             "Folder" = "8:_0EC946766587429A98E3BCE398DEEE09"
             "WorkingFolder" = "8:_5C41072D7D23458CBE660FF00C6E1DE6"
-            "Icon" = "8:_472AD259291E41EAB6C49E7577C8D84F"
+            "Icon" = "8:_4D8F5B47C1B04AFEAD480B08A99EC8D6"
             "Feature" = "8:"
             }
         }

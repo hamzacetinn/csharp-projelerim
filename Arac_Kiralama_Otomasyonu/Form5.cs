@@ -43,7 +43,7 @@ namespace Arac_Kiralama_Otomasyonu
                 MessageBox.Show("Hata: " + ex.ToString());
             }
         }
-        private void SozlesmeListele()
+        public void SozlesmeListele()
         {
             try
             {
@@ -58,7 +58,7 @@ namespace Arac_Kiralama_Otomasyonu
             }
         }
 
-        private void AracListele()
+        public void AracListele()
         {
             try
             {

@@ -47,10 +47,10 @@ namespace Arac_Kiralama_Otomasyonu
 
                 baglanti = new SqlConnection(Baglan.baglanti);
                 if (baglanti.State == ConnectionState.Closed) baglanti.Open();
-                da = new SqlDataAdapter("INSERT INTO musteri_yonetimi (tc_no, isim, soy_isim, telefon, telefon2, mail) VALUES (@q1, @q2, @q3, @q4, @q5, @q6)", baglanti);
+                da = new SqlDataAdapter("INSERT INTO musteri_yonetimi (tc_no, isim, soy_isim, tel1, tel2, mail) VALUES (@q1, @q2, @q3, @q4, @q5, @q6)", baglanti);
                 da.SelectCommand.Parameters.AddWithValue("@q1", txt_tctno.Text); // tc_no
                 da.SelectCommand.Parameters.AddWithValue("@q2", txtAd.Text); // isim
-                da.SelectCommand.Parameters.AddWithValue("@q3", txt_tctno.Text); // soy_isim
+                da.SelectCommand.Parameters.AddWithValue("@q3", txtSoyad.Text);// soy_isim
                 da.SelectCommand.Parameters.AddWithValue("@q4", txt_tel.Text); // telefon
                 da.SelectCommand.Parameters.AddWithValue("@q5", txt_tel2.Text); // telefon2
                 da.SelectCommand.Parameters.AddWithValue("@q6", txtmail.Text); // mail
@@ -71,12 +71,16 @@ namespace Arac_Kiralama_Otomasyonu
                     if (form is Form5)
                     {
                         ((Form5)form).VeriYenile2();
+                        ((Form5)form).AracListele();
+                        ((Form5)form).SozlesmeListele();
                         break;
                     }
                 }
 
                 frm5.VeriYenile2();
-                frm5.dgw_musteri.Refresh();
+                
+                frm5.AracListele();
+                frm5.SozlesmeListele();
                 baglanti.Close();
                 this.Close();
 

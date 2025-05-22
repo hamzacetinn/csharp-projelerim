@@ -26,7 +26,7 @@ namespace Arac_Kiralama_Otomasyonu
             btnListe.Enabled = true;
             btnEditEx.Visible = false;
             btnListeEx.Visible = false;
-            btnClear.Visible = false;   
+            btnClear.Visible = false;
             btnDelet.Visible = false;
             dgw_kullanici.Visible = false;
 
@@ -95,7 +95,8 @@ namespace Arac_Kiralama_Otomasyonu
                     cmd.ExecuteNonQuery();
                     conn.Close();
                 }
-                else {
+                else
+                {
                     if (conn.State == ConnectionState.Closed) conn.Open();
                     string query = "insert into kullanici (k_adi, k_soyadi, k_görevi, k_adresi, k_mail,k_tel,k_tel_yakin,k_sifre)  values( @adi,@soyad,@gorevi,@adres,@mail,@tel1,@tel2,@sifre)";
                     SqlCommand cmd = new SqlCommand(query, conn);
@@ -118,7 +119,7 @@ namespace Arac_Kiralama_Otomasyonu
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if(AktifKullanici.Gorev == "Yönetici" || AktifKullanici.Gorev == "admin")
+            if (AktifKullanici.Gorev == "Yönetici" || AktifKullanici.Gorev == "admin")
             {
                 openFileDialog1.Title = "Resim Seçiniz";
                 openFileDialog1.Filter = "Resim Dosyaları|*.jpg;*.jpeg;*.png;*.bmp";
@@ -263,7 +264,7 @@ namespace Arac_Kiralama_Otomasyonu
                 txtTel1.ReadOnly = false;
                 txtTel2.ReadOnly = false;
                 txtSifre.ReadOnly = false;
-               
+
 
 
                 btnEdit.Visible = false;
@@ -319,7 +320,7 @@ namespace Arac_Kiralama_Otomasyonu
             {
 
                 conn.Open();
-                string query = "SELECT k_adi, k_soyadi, k_görevi, k_adresi, k_mail,k_tel,k_tel_yakin, k_sifre FROM kullanici WHERE k_id = @id";
+                string query = "SELECT * FROM kullanici WHERE k_id = @id";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@id", AktifKullanici.KullaniciID);
 
@@ -334,8 +335,22 @@ namespace Arac_Kiralama_Otomasyonu
                     txtTel1.Text = dr["k_tel"].ToString();
                     txtTel2.Text = dr["k_tel_yakin"].ToString();
                     txtSifre.Text = dr["k_sifre"].ToString();
+                    if (dr["fotografi"] != DBNull.Value)
+                    {
+                        byte[] resim = new byte[0];
+                        resim = (byte[])dr["fotografi"];
+                        MemoryStream ms = new MemoryStream(resim);
+                        pictureBox1.Image = Image.FromStream(ms);
+                        dr.Close();
+                        ms.Close();
+                    }
+                    else
+                    {
+                        pictureBox1.Image = Properties.Resources._3__8_;
+                    }
+                    dr.Close();
+
                 }
-                dr.Close();
             }
         }
         private void btnListe_Click(object sender, EventArgs e)
@@ -450,7 +465,7 @@ namespace Arac_Kiralama_Otomasyonu
                         pictureBox1.Image = Image.FromStream(ms);
                         dr.Close();
                         ms.Close();
-                        
+
                     }
                     else
                     {
@@ -501,6 +516,53 @@ namespace Arac_Kiralama_Otomasyonu
             }
             btnListeEx.Visible = false;
             btnListe.Visible = true;
+            txtAd.Clear();
+            txtSoyAd.Clear();
+            txtGorev.Clear();
+            txtAdres.Clear();
+            txtMail.Clear();
+            txtTel1.Clear();
+            txtTel2.Clear();
+            txtSifre.Clear();
+
+            string connectionString = Baglan.baglanti;
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+
+                conn.Open();
+                string query = "SELECT * FROM kullanici WHERE k_id = @id";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@id", AktifKullanici.KullaniciID);
+
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    txtAd.Text = dr["k_adi"].ToString();
+                    txtSoyAd.Text = dr["k_soyadi"].ToString();
+                    txtGorev.Text = dr["k_görevi"].ToString();
+                    txtAdres.Text = dr["k_adresi"].ToString();
+                    txtMail.Text = dr["k_mail"].ToString();
+                    txtTel1.Text = dr["k_tel"].ToString();
+                    txtTel2.Text = dr["k_tel_yakin"].ToString();
+                    txtSifre.Text = dr["k_sifre"].ToString();
+                    if (dr["fotografi"] != DBNull.Value)
+                    {
+                        byte[] resim = new byte[0];
+                        resim = (byte[])dr["fotografi"];
+                        MemoryStream ms = new MemoryStream(resim);
+                        pictureBox1.Image = Image.FromStream(ms);
+                        dr.Close();
+                        ms.Close();
+                    }
+                    else
+                    {
+                        pictureBox1.Image = Properties.Resources._3__8_;
+                    }
+                    dr.Close();
+
+                }
+
+            }
         }
         private void btnClear_Click(object sender, EventArgs e)
         {

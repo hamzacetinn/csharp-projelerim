@@ -28,6 +28,8 @@ namespace Arac_Kiralama_Otomasyonu
             btnListeEx.Visible = false;
             btnClear.Visible = false;   
             btnDelet.Visible = false;
+            dgw_kullanici.Visible = false;
+
 
             string connectionString = Baglan.baglanti;
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -71,6 +73,7 @@ namespace Arac_Kiralama_Otomasyonu
             {
                 if (!string.IsNullOrEmpty(openFileDialog1.FileName) && File.Exists(openFileDialog1.FileName))
                 {
+                    if (conn.State == ConnectionState.Closed) conn.Open();
                     FileStream fs = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read);
                     BinaryReader br = new BinaryReader(fs);
                     byte[] resim = br.ReadBytes((int)fs.Length);
@@ -88,6 +91,7 @@ namespace Arac_Kiralama_Otomasyonu
                     cmd.Parameters.AddWithValue("@tel2", txtTel2.Text);
                     cmd.Parameters.AddWithValue("@sifre", txtSifre.Text);
                     cmd.Parameters.Add("@foto", SqlDbType.Image, resim.Length).Value = resim;
+                    dgw_kullanici.DataSource = ds.Tables["kullanici"];
                     cmd.ExecuteNonQuery();
                     conn.Close();
                 }
@@ -103,7 +107,6 @@ namespace Arac_Kiralama_Otomasyonu
                     cmd.Parameters.AddWithValue("@tel1", txtTel1.Text);
                     cmd.Parameters.AddWithValue("@tel2", txtTel2.Text);
                     cmd.Parameters.AddWithValue("@sifre", txtSifre.Text);
-                    ;
                     cmd.ExecuteNonQuery();
                     da = new SqlDataAdapter("select k_id,k_adi, k_soyadi, k_görevi, k_adresi, k_mail,k_tel,k_tel_yakin,k_sifre from kullanici order by k_id", conn);
                     ds.Clear();
@@ -151,7 +154,7 @@ namespace Arac_Kiralama_Otomasyonu
 
                             string query = "update kullanici set k_adi=@adi,k_soyadi=@soyad,k_görevi=@gorevi,k_adresi=@adres,k_mail=@mail,k_tel=@tel1,k_tel_yakin=@tel2,k_sifre=@sifre,fotografi=@foto where k_id=@id";
                             SqlCommand cmd = new SqlCommand(query, conn);
-                            cmd.Parameters.AddWithValue("@id", dgw_kullanici.SelectedRows[0].Cells[0].Value);
+                            cmd.Parameters.AddWithValue("@id", AktifKullanici.KullaniciID);
                             cmd.Parameters.AddWithValue("@adi", txtAd.Text);
                             cmd.Parameters.AddWithValue("@soyad", txtSoyAd.Text);
                             cmd.Parameters.AddWithValue("@gorevi", txtGorev.Text);
@@ -170,7 +173,7 @@ namespace Arac_Kiralama_Otomasyonu
                             if (conn.State == ConnectionState.Closed) conn.Open();
                             string query = "update kullanici set k_adi=@adi,k_soyadi=@soyad,k_görevi=@gorevi,k_adresi=@adres,k_mail=@mail,k_tel=@tel1,k_tel_yakin=@tel2,k_sifre=@sifre where k_id=@id";
                             SqlCommand cmd = new SqlCommand(query, conn);
-                            cmd.Parameters.AddWithValue("@id", dgw_kullanici.SelectedRows[0].Cells[0].Value);
+                            cmd.Parameters.AddWithValue("@id", AktifKullanici.KullaniciID);
                             cmd.Parameters.AddWithValue("@adi", txtAd.Text);
                             cmd.Parameters.AddWithValue("@soyad", txtSoyAd.Text);
                             cmd.Parameters.AddWithValue("@gorevi", txtGorev.Text);
@@ -198,7 +201,7 @@ namespace Arac_Kiralama_Otomasyonu
 
                             string query = "update kullanici set k_adi=@adi,k_soyadi=@soyad,k_görevi=@gorevi,k_adresi=@adres,k_mail=@mail,k_tel=@tel1,k_tel_yakin=@tel2,k_sifre=@sifre,fotografi=@foto where k_id=@id";
                             SqlCommand cmd = new SqlCommand(query, conn);
-                            cmd.Parameters.AddWithValue("@id", AktifKullanici.KullaniciID);
+                            cmd.Parameters.AddWithValue("@id", dgw_kullanici.SelectedRows[0].Cells[0].Value);
                             cmd.Parameters.AddWithValue("@adi", txtAd.Text);
                             cmd.Parameters.AddWithValue("@soyad", txtSoyAd.Text);
                             cmd.Parameters.AddWithValue("@gorevi", txtGorev.Text);

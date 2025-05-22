@@ -141,7 +141,7 @@ namespace Arac_Kiralama_Otomasyonu
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
 
-                    if (dgw_kullanici.CurrentRow == null)
+                    if (btnListe.Visible == true)
                     {
                         if (!string.IsNullOrEmpty(openFileDialog1.FileName) && File.Exists(openFileDialog1.FileName))
                         {
@@ -188,7 +188,7 @@ namespace Arac_Kiralama_Otomasyonu
                             conn.Close();
                         }
                     }
-                    if (dgw_kullanici.CurrentRow != null)
+                    if (btnListe.Visible == false)
                     {
                         if (!string.IsNullOrEmpty(openFileDialog1.FileName) && File.Exists(openFileDialog1.FileName))
                         {

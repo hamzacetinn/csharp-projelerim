@@ -198,7 +198,7 @@ namespace Arac_Kiralama_Otomasyonu
                             byte[] resim = br.ReadBytes((int)fs.Length);
                             br.Close();
                             fs.Close();
-                            conn.Open();
+                            if (conn.State == ConnectionState.Closed) conn.Open();
 
                             string query = "update kullanici set k_adi=@adi,k_soyadi=@soyad,k_görevi=@gorevi,k_adresi=@adres,k_mail=@mail,k_tel=@tel1,k_tel_yakin=@tel2,k_sifre=@sifre,fotografi=@foto where k_id=@id";
                             SqlCommand cmd = new SqlCommand(query, conn);
@@ -242,7 +242,7 @@ namespace Arac_Kiralama_Otomasyonu
                     conn.Close();
                 }
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex) { MessageBox.Show(ex.ToString()); }
         }
         private void btnEdit_Click(object sender, EventArgs e)
         {
@@ -319,7 +319,7 @@ namespace Arac_Kiralama_Otomasyonu
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
 
-                conn.Open();
+                if(conn.State ==ConnectionState.Closed)  conn.Open();
                 string query = "SELECT * FROM kullanici WHERE k_id = @id";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@id", AktifKullanici.KullaniciID);
@@ -349,8 +349,9 @@ namespace Arac_Kiralama_Otomasyonu
                         pictureBox1.Image = Properties.Resources._3__8_;
                     }
                     dr.Close();
-
+                    conn.Close();
                 }
+                baglanti.Close();
             }
         }
         private void btnListe_Click(object sender, EventArgs e)
@@ -529,7 +530,7 @@ namespace Arac_Kiralama_Otomasyonu
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
 
-                conn.Open();
+                if (conn.State == ConnectionState.Closed) conn.Open();
                 string query = "SELECT * FROM kullanici WHERE k_id = @id";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@id", AktifKullanici.KullaniciID);
@@ -559,8 +560,10 @@ namespace Arac_Kiralama_Otomasyonu
                         pictureBox1.Image = Properties.Resources._3__8_;
                     }
                     dr.Close();
+                    conn.Close();
 
                 }
+                baglanti.Close();
 
             }
         }
